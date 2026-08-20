@@ -246,7 +246,7 @@ outputs:
       run:
         - python >=${{ python_min }},<${{ python_over }}
         - apache-airflow-task-sdk ==${{ task_sdk_version }}
-        - apache-airflow-core ==3.3.1
+        - apache-airflow-core == ${{ version }}
     tests:
       - python:
           imports:
