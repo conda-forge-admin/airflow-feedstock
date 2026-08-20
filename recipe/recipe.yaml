@@ -50,7 +50,6 @@ outputs:
         - python >=${{ python_min }},<${{ python_over }}
         - apache-airflow-core >=3.3.0,<3.4.0
         # tightest of upstream's floors (python >=3.14)
-        # tighter constraint for python >=3.14
         - asgiref >=3.11.1
         - attrs >=24.2.0,!=25.2.0
         - babel >=2.17.0
@@ -117,7 +116,6 @@ outputs:
         - alembic >=1.13.1,<2.0
         - argcomplete >=1.10
         # tightest of upstream's floors (python >=3.14)
-        # tighter constraint for python >=3.14
         - asgiref >=3.11.1
         - attrs >=22.1.0,!=25.2.0
         - cadwyn >=6.1.1
@@ -139,7 +137,6 @@ outputs:
         - jsonschema >=4.19.1
         - lazy-object-proxy >=1.2.0
         # tightest of upstream's floors (python >=3.14)
-        # tighter constraint for python >=3.14
         - libcst >=1.8.6
         - linkify-it-py >=2.0.0
         - lockfile >=0.12.2
@@ -533,9 +530,10 @@ outputs:
         # from the s3fs extra
         - apache-airflow-providers-amazon-with-s3fs
         - apache-airflow ==${{ version }}
-        - pyexasol !=1.1.1,!=2.0.0
 
-        # temporary constraints because of bad dependencies
+        # temporary constraint because of bad dependencies
+        - pyexasol !=1.1.1,!=2.0.0
+        # temporary constraint because of bad dependencies
         - snowflake-connector-python !=4.4.0
     tests:
       - python:
